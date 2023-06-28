@@ -1,23 +1,24 @@
+require('dotenv').config()
+
 // Importing required modules
 const express = require("express");
 const path = require("path");
 const cors = require('cors')
-
 // importing custom modules
 const connectToMongoDB = require("./connect");
 const authRoute = require('./routes/authRoute')
 
 
 // Express server configuration
-const PORT = 3001;
+const PORT = process.env.PORT;
 // mongoose configuration
-const URI = 'mongodb://localhost:27017/rf-ed-tech'
+const MONGOOSE_URI = process.env.MONGOOSE_URI
 
 
 // Invoking Express
 const app = express();
 // connecting to mongoDB
-connectToMongoDB(URI).then(() => console.log(`Connect to mongoDB to URI: ${URI}`))
+connectToMongoDB(MONGOOSE_URI).then(() => console.log(`Connect to mongoDB to URI: ${MONGOOSE_URI}`))
 
 
 // Middlewares

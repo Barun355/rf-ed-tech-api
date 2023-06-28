@@ -66,6 +66,5 @@ const handleRegisterUser = async (req, res) => {
 
 module.exports = {
     handleRegisterUser,
-    handleLoginUser,
-    handleLogOutUser
+    handleLoginUser
 };
