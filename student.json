@@ -1,0 +1,26 @@
+{
+    "role": "student",
+    "user_name": "manoj",
+    "email": "manojpal@gmail.com",
+    "password": "manoj",
+    "phone_number": 7250903533,
+    "address": {
+        "country": "India"
+    },
+    "course_data": [
+        {
+            "id": "10",
+            "category": "bookmarked",
+            "resource": [
+                {
+                    "notes": [
+                        {
+                            "id": "20",
+                            "content": "Hii this is manoj"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

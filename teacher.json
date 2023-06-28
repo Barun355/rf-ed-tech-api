@@ -1,0 +1,22 @@
+{
+    "role": "teacher",
+    "user_name": "Pawan",
+    "email": "pawansharma@gmail.com",
+    "password": "pawan",
+    "phone_number": 9123405894,
+    "address": {
+        "country": "India"
+    },
+    "course_in": [
+        {
+            "course_id": "10"
+        }
+    ],
+    "qualification": [
+        {
+            "college": "BIT Sindri",
+            "degree": "Computer Science",
+            "rank": "1st"
+        }
+    ]
+}
