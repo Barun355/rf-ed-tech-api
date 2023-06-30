@@ -4,10 +4,14 @@ require('dotenv').config()
 const express = require("express");
 const path = require("path");
 const cors = require('cors')
+
 // importing custom modules
 const connectToMongoDB = require("./connect");
-const authRoute = require('./routes/authRoute')
 
+// importing router
+const authRoute = require('./routes/authRoute')
+const coursesRoute = require('./routes/coursesRoute')
+const notesRoute = require('./routes/notesRoute')
 
 // Express server configuration
 const PORT = process.env.PORT;
@@ -23,7 +27,7 @@ connectToMongoDB(MONGOOSE_URI).then(() => console.log(`Connect to mongoDB to URI
 
 // Middlewares
 app.use(cors({
-    origin: process.env.CORS_ORIGIN
+    origin: "http://127.0.0.1:5173"
 }))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json());
@@ -45,6 +49,8 @@ app
 });
 
 app.use('/api/v1/auth', authRoute)
+app.use('/api/v1/courses', coursesRoute)
+app.use('/api/v1/notes', notesRoute)
 
 // Starting Express server on the port=PORT host='localhost'
 app.listen(PORT, () =>

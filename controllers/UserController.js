@@ -1,5 +1,5 @@
 const crypto = require('crypto')
-const Users = require("../models/UserModal");
+const Users = require("../models/UserModel");
 
 const handleLoginUser = async (req, res) => {
     const { email, password } = req.body;
