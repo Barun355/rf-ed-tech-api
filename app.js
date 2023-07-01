@@ -27,7 +27,7 @@ connectToMongoDB(MONGOOSE_URI).then(() => console.log(`Connect to mongoDB to URI
 
 // Middlewares
 app.use(cors({
-    origin: "http://127.0.0.1:5173"
+    origin: process.env.CORS_ORIGIN
 }))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json());
